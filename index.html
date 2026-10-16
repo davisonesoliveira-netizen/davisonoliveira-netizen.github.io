@@ -127,6 +127,11 @@
             font-weight: 600;
             border: 1px solid var(--border-color);
         }
+        .project-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
         .btn-project {
             display: inline-block;
             background-color: var(--accent-color);
@@ -140,6 +145,7 @@
         }
         .btn-project:hover {
             background-color: var(--accent-hover);
+            transform: translateY(-1px);
         }
         footer {
             text-align: center;
@@ -185,7 +191,10 @@
                     <span class="tag">ETL Pipeline</span>
                     <span class="tag">Análise Estatística</span>
                 </div>
-                <a href="https://github.com/davisonoliveira-netizen" class="btn-project" target="_blank">Explorar Repositório</a>
+                <div class="project-actions">
+                    <a href="https://datastudio.google.com/reporting/25204edf-ddbf-4e9c-af24-a505af16a6ae" class="btn-project" target="_blank">Veja o dashboard</a>
+                    <a href="https://github.com/davisonoliveira-netizen" class="btn-project" target="_blank">Explorar Repositório</a>
+                </div>
             </div>
 
             <!-- PRÓXIMO CASE -->
