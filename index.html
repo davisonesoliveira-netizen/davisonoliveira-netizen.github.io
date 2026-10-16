@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davison Oliveira | Estatístico & Cientista de Dados</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-color: #38bdf8;
+            --accent-hover: #0ea5e9;
+            --border-color: #334155;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            padding: 2.5rem 1rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            padding: 3.5rem 0 2.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 0.4rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+        }
+        header .bio {
+            color: var(--text-muted);
+            max-width: 720px;
+            margin: 0 auto 1.8rem auto;
+            font-size: 1rem;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.6rem 1.4rem;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            border: 1px solid #475569;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .social-links a:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+        section {
+            padding: 3rem 0;
+        }
+        section h2 {
+            font-size: 1.7rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 12px;
+            color: var(--text-color);
+        }
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2.2rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent-color);
+        }
+        .project-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: var(--accent-color);
+        }
+        .project-card p {
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+            font-size: 0.98rem;
+        }
+        .tags {
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .tag {
+            background-color: #0f172a;
+            color: var(--accent-color);
+            padding: 0.35rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+        }
+        .btn-project {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+        .btn-project:hover {
+            background-color: var(--accent-hover);
+        }
+        footer {
+            text-align: center;
+            padding: 2.5rem 0 1rem 0;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- HEADER / APRESENTAÇÃO -->
+        <header>
+            <h1>Davison Eduardo Silva de Oliveira</h1>
+            <p>Estatístico & Cientista de Dados</p>
+            <div class="bio">
+                Estatístico formado pela UNESP com pós-graduação em Data Science e Informática em Saúde pelo Albert Einstein. Mais de uma década de experiência transformando dados complexos e desestruturados em inteligência acionável, automação de pipelines de dados (ETL) e dashboards gerenciais orientados a negócios.
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/davisonesoliveira" target="_blank">LinkedIn</a>
+                <a href="https://github.com/davisonoliveira-netizen" target
