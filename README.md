@@ -6,7 +6,7 @@
 
 ## 🌐 Acesse o Portfólio Online
 Você pode visualizar a versão interativa e completa deste portfólio diretamente pelo link:
-👉 **[https://davisonoliveira-netizen.github.io](https://github.com/davisonesoliveira-netizen)**
+👉 **[https://davisonoliveira-netizen.github.io](https://davisonesoliveira-netizen.github.io/davisonoliveira-netizen.github.io/)**
 
 ---
 
