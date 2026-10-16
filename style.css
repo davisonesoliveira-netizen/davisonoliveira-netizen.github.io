@@ -1,0 +1,13 @@
+:root {
+    --primary: #1e293b; /* Azul escuro corporativo */
+    --accent: #2563eb;  /* Azul analítico vibrante */
+    --bg: #f8fafc;
+    --text: #334155;
+}
+body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); margin: 0; }
+.hero { background: var(--primary); color: white; padding: 4rem 2rem; text-align: center; }
+.container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+.tags span { background: #e2e8f0; padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin: 0.25rem; font-weight: bold; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+.card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border-top: 4px solid var(--accent); }
+.btn { display: inline-block; margin-top: 1rem; color: var(--accent); text-decoration: none; font-weight: bold; }
