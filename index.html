@@ -1,231 +1,493 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Davison Oliveira | Estatístico & Cientista de Dados</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-color: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent-color: #38bdf8;
-            --accent-hover: #0ea5e9;
-            --border-color: #334155;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.7;
-            padding: 2.5rem 1rem;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        header {
-            text-align: center;
-            padding: 3.5rem 0 2.5rem 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-color);
-            margin-bottom: 0.4rem;
-        }
-        header p {
-            font-size: 1.2rem;
-            color: var(--accent-color);
-            font-weight: 600;
-            margin-bottom: 1.2rem;
-        }
-        header .bio {
-            color: var(--text-muted);
-            max-width: 720px;
-            margin: 0 auto 1.8rem auto;
-            font-size: 1rem;
-            text-align: left;
-        }
-        header .bio p {
-            font-size: 1rem;
-            color: var(--text-muted);
-            font-weight: 400;
-            margin-bottom: 1rem;
-        }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.6rem 1.4rem;
-            background-color: var(--card-bg);
-            color: var(--text-color);
-            border: 1px solid #475569;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-        .social-links a:hover {
-            background-color: var(--accent-color);
-            color: var(--bg-color);
-            border-color: var(--accent-color);
-            transform: translateY(-2px);
-        }
-        section {
-            padding: 3rem 0;
-        }
-        section h2 {
-            font-size: 1.7rem;
-            margin-bottom: 2rem;
-            border-left: 4px solid var(--accent-color);
-            padding-left: 12px;
-            color: var(--text-color);
-        }
-        .project-card {
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            padding: 2.2rem;
-            margin-bottom: 2rem;
-            border: 1px solid var(--border-color);
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
-        .project-card:hover {
-            transform: translateY(-3px);
-            border-color: var(--accent-color);
-        }
-        .project-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.8rem;
-            color: var(--accent-color);
-        }
-        .project-card p {
-            color: var(--text-muted);
-            margin-bottom: 1.2rem;
-            font-size: 0.98rem;
-        }
-        .tags {
-            margin-bottom: 1.5rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        .tag {
-            background-color: #0f172a;
-            color: var(--accent-color);
-            padding: 0.35rem 0.9rem;
-            border-radius: 20px;
-            font-size: 0.82rem;
-            font-weight: 600;
-            border: 1px solid var(--border-color);
-        }
-        .project-actions {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-        .btn-project {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: var(--bg-color);
-            padding: 0.6rem 1.2rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: background-color 0.2s, transform 0.2s;
-        }
-        .btn-project:hover {
-            background-color: var(--accent-hover);
-            transform: translateY(-1px);
-        }
-        footer {
-            text-align: center;
-            padding: 2.5rem 0 1rem 0;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            border-top: 1px solid var(--border-color);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Davison Oliveira | Estatístico & Cientista de Dados</title>
+<meta name="description" content="Estatístico (UNESP) e cientista de dados com mais de dez anos de experiência em modelagem estatística, análise preditiva e dashboards.">
+<meta property="og:title" content="Davison Oliveira | Estatístico & Cientista de Dados">
+<meta property="og:description" content="Modelagem estatística, análise preditiva e dashboards que transformam dados em decisões.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231F3FBF'/%3E%3Cpath d='M3 26C9 26 11 6 16 6s7 20 13 20' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --paper: #F6F7F9;
+    --surface: #FFFFFF;
+    --ink: #12161C;
+    --muted: #566070;
+    --rule: #DCE0E7;
+    --accent: #1F3FBF;
+    --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+    --sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0E1116;
+      --surface: #151A21;
+      --ink: #E8EBF0;
+      --muted: #9AA3B0;
+      --rule: #252C36;
+      --accent: #92A9FF;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  .skip {
+    position: absolute; left: 1rem; top: -4rem;
+    background: var(--ink); color: var(--paper);
+    padding: .6rem 1rem; border-radius: 6px; z-index: 50;
+  }
+  .skip:focus { top: 1rem; }
+
+  /* Apresentação */
+  .hero { padding: clamp(4rem, 13vh, 8rem) 0 clamp(2rem, 5vh, 3.5rem); }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 300;
+    font-size: clamp(2.3rem, 5.8vw, 3.9rem);
+    line-height: 1.06;
+    letter-spacing: -0.02em;
+    margin: 0 0 1rem;
+    max-width: 18ch;
+  }
+  .role {
+    margin: 0;
+    font-size: 1.15rem;
+    color: var(--muted);
+  }
+
+  .curve { display: block; width: 100%; height: auto; margin-top: clamp(2.5rem, 7vh, 4rem); overflow: visible; }
+  .curve .fill { fill: var(--accent); opacity: .07; }
+  .curve .line { fill: none; stroke: var(--accent); stroke-width: 1.5; stroke-linecap: round; }
+  .curve .mean { stroke: var(--accent); stroke-width: 1; stroke-dasharray: 3 5; opacity: .55; }
+  .curve .base { stroke: var(--rule); stroke-width: 1; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .curve .line { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 2.2s cubic-bezier(.65,0,.25,1) .2s forwards; }
+    .curve .fill, .curve .mean { opacity: 0; animation: appear 1s ease 1.6s forwards; }
+    .curve .fill { --to: .07; }
+    .curve .mean { --to: .55; }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes appear { to { opacity: var(--to); } }
+  }
+
+  /* Seções */
+  .row {
+    display: grid;
+    grid-template-columns: minmax(0, 190px) minmax(0, 1fr);
+    gap: 1rem 2.5rem;
+    padding: clamp(2.5rem, 6vw, 3.75rem) 0;
+    border-top: 1px solid var(--rule);
+  }
+  .row > h2 {
+    margin: 0;
+    font-size: .95rem;
+    font-weight: 600;
+    color: var(--muted);
+    line-height: 1.9;
+  }
+  .content { max-width: 64ch; }
+  .content p { margin: 0 0 1.15rem; }
+  .content p:last-child { margin-bottom: 0; }
+  .lead { font-family: var(--serif); font-size: 1.4rem; line-height: 1.5; font-weight: 400; }
+
+  .links { display: flex; flex-wrap: wrap; gap: .5rem 1.75rem; margin-top: 1.75rem; }
+  .link {
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 1px;
+    transition: color .2s;
+  }
+  .link:hover { color: var(--accent); }
+
+  /* Projetos */
+  .project + .project { margin-top: 3.25rem; padding-top: 3.25rem; border-top: 1px solid var(--rule); }
+  .project h3 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(1.4rem, 2.6vw, 1.75rem);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin: 0 0 1rem;
+  }
+  .project p { color: var(--muted); margin: 0 0 1.1rem; }
+  .project .stack { color: var(--ink); font-size: .95rem; margin-bottom: 1.4rem; }
+  .project.soon { opacity: .72; }
+  .project.soon .status {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--muted);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: .1rem .7rem;
+    margin-left: .6rem;
+    vertical-align: middle;
+    letter-spacing: 0;
+  }
+
+  /* Trajetória */
+  .facts { margin: 0; display: grid; gap: 1.6rem; }
+  .facts div { display: grid; gap: .15rem; }
+  .facts dt { font-weight: 600; }
+  .facts dd { margin: 0; color: var(--muted); }
+
+  /* Rodapé */
+  footer { border-top: 1px solid var(--rule); padding: 2rem 0 3rem; color: var(--muted); font-size: .9rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: .5rem 2rem; justify-content: space-between; }
+  .text-btn {
+    background: none; border: 0; padding: 0; font: inherit; color: inherit;
+    text-decoration: underline; text-underline-offset: 3px; cursor: pointer;
+  }
+  .text-btn:hover { color: var(--accent); }
+
+  @media (max-width: 720px) {
+    .row { grid-template-columns: 1fr; gap: .5rem; }
+    .lead { font-size: 1.25rem; }
+  }
+
+  /* Aviso de privacidade */
+  .consent {
+    position: fixed;
+    left: max(1rem, env(safe-area-inset-left));
+    right: max(1rem, env(safe-area-inset-right));
+    bottom: max(1rem, env(safe-area-inset-bottom));
+    max-width: 540px;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 1.1rem 1.25rem;
+    font-size: .92rem;
+    line-height: 1.55;
+    box-shadow: 0 12px 40px rgba(0,0,0,.12);
+    z-index: 40;
+  }
+  .consent[hidden] { display: none; }
+  .consent p { margin: 0 0 .9rem; color: var(--muted); }
+  .consent .actions { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
+  .btn {
+    font: inherit; font-weight: 500; font-size: .92rem;
+    padding: .5rem 1.1rem; border-radius: 8px; cursor: pointer;
+    border: 1px solid var(--ink); background: var(--ink); color: var(--paper);
+  }
+  .btn.ghost { background: transparent; color: var(--ink); border-color: var(--rule); }
+  .btn:hover { border-color: var(--accent); }
+  .consent .text-btn { margin-left: auto; font-size: .88rem; }
+
+  dialog {
+    width: min(560px, calc(100% - 2rem));
+    background: var(--surface); color: var(--ink);
+    border: 1px solid var(--rule); border-radius: 14px;
+    padding: 1.75rem; font-size: .95rem; line-height: 1.6;
+  }
+  dialog::backdrop { background: rgba(10,12,16,.55); }
+  dialog h2 { font-family: var(--serif); font-weight: 400; font-size: 1.5rem; margin: 0 0 1rem; }
+  dialog h3 { font-size: .95rem; margin: 1.1rem 0 .25rem; }
+  dialog p, dialog ul { margin: 0 0 .5rem; color: var(--muted); }
+  dialog ul { padding-left: 1.1rem; }
+  dialog .actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.4rem; }
+</style>
 </head>
 <body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
 
-    <div class="container">
-        <!-- HEADER / APRESENTAÇÃO -->
-        <header>
-            <h1>Davison Eduardo Silva de Oliveira</h1>
-            <p>Estatístico & Cientista de Dados</p>
-            <div class="bio">
-                <p style="text-align: justify;">Estatístico formado pela UNESP com pós-graduação em Data Science e Informática em Saúde pelo Hospital Israelita Albert Einstein, somando mais de uma década de experiência transformando dados complexos em decisões estratégicas.</p>
-                <p style="text-align: justify;">Ao longo da minha carreira em empresas como SulAmérica, Fundação Bradesco e Sharecare, atuei no desenvolvimento de modelos estatísticos, análise de sinistros, previsibilidade de desfechos, construção de dashboards e análise estatística de impacto financeiro.</p>
-                <p style="text-align: justify;">Acredito que a verdadeira ciência de dados não está apenas nos algoritmos complexos, mas na capacidade de traduzir números em clareza para tomadores de decisão, ou seja, utilizar a inteligência de dados para subsidiar ações de impacto. Atualmente, fomento uma cultura analítica por meio de análise estatística de dados, modelagens preditivas e dashboards interativos (Looker Studio / Power BI).</p>
-            </div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/davisonesoliveira" target="_blank">LinkedIn</a>
-                <a href="https://github.com/davisonesoliveira-netizen" target="_blank">GitHub</a>
-                <a href="mailto:davisonesoliveira@gmail.com">E-mail</a>
-            </div>
-        </header>
+<main id="conteudo">
+  <header class="hero">
+    <div class="wrap">
+      <h1>Davison Eduardo Silva de Oliveira</h1>
+      <p class="role">Estatístico & Cientista de Dados</p>
 
-        <!-- PROJETOS EM DESTAQUE -->
-        <section>
-            <h2>Projetos em Destaque</h2>
-
-            <!-- PROJETO: DASHBOARD CONDOMÍNIO -->
-            <div class="project-card">
-                <h3>Pipeline ETL & Dashboard de Gestão Financeira Condominial</h3>
-                <p style="text-align: justify;">
-                    Solução desenvolvida de ponta a ponta para automatizar a extração e o tratamento de relatórios contábeis complexos de administradoras. O projeto engloba um pipeline robusto em Python (Google Colab) para ingestão e normalização, carga estruturada em Google Sheets e modelagem de visualização interativa no Looker Studio. Focado em auditoria de fluxo de caixa, monitoramento de séries históricas de créditos, débitos, controle rigoroso de inadimplência e apoio à criação de planos de ação para recuperação de caixa ordinário.
-                </p>
-                <div class="tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">Pandas</span>
-                    <span class="tag">Google Sheets API</span>
-                    <span class="tag">Looker Studio</span>
-                    <span class="tag">ETL Pipeline</span>
-                    <span class="tag">Análise Estatística</span>
-                </div>
-                <div class="project-actions">
-                    <a href="https://datastudio.google.com/reporting/25204edf-ddbf-4e9c-af24-a505af16a6ae" class="btn-project" target="_blank">Veja o dashboard</a>
-                    <a href="https://github.com/davisonoliveira-netizen" class="btn-project" target="_blank">Explorar Repositório</a>
-                </div>
-            </div>
-
-            <!-- PRÓXIMO CASE -->
-            <div class="project-card">
-                <h3>Modelagem Estatística de Séries Temporais (Em Breve)</h3>
-                <p style="text-align: justify;">
-                    Aplicação de metodologias econométricas e estatísticas avançadas (como modelos SARIMAX e VAR) para projeção de cenários orçamentários, previsão de fluxo de caixa e análise preditiva de comportamento financeiro sazonal.
-                </p>
-                <div class="tags">
-                    <span class="tag">Estatística</span>
-                    <span class="tag">Séries Temporais</span>
-                    <span class="tag">SARIMAX</span>
-                    <span class="tag">Python</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- FOOTER -->
-        <footer>
-            <p>&copy; 2026 Davison Eduardo. Desenvolvido com GitHub Pages.</p>
-        </footer>
+      <svg class="curve" viewBox="0 0 960 120" preserveAspectRatio="none" role="img" aria-label="Curva de distribuição normal com a média destacada">
+        <line class="base" x1="0" y1="110" x2="960" y2="110"/>
+        <path class="fill" d="M0 110 C 190 110, 320 8, 480 8 C 640 8, 770 110, 960 110 Z"/>
+        <path class="line" pathLength="1" d="M0 110 C 190 110, 320 8, 480 8 C 640 8, 770 110, 960 110"/>
+        <line class="mean" x1="480" y1="8" x2="480" y2="110"/>
+      </svg>
     </div>
+  </header>
 
+  <div class="wrap">
+    <section class="row" aria-labelledby="sobre">
+      <h2 id="sobre">Sobre</h2>
+      <div class="content">
+        <p class="lead">Estatístico formado pela UNESP, com pós-graduação em Data Science e Informática em Saúde pelo Hospital Israelita Albert Einstein e mais de uma década transformando dados complexos em decisões estratégicas.</p>
+        <p>Ao longo da carreira em empresas como SulAmérica, Fundação Bradesco e Sharecare, atuei no desenvolvimento de modelos estatísticos, análise de sinistros, previsibilidade de desfechos, construção de dashboards e análise estatística de impacto financeiro.</p>
+        <p>Acredito que a verdadeira ciência de dados não está apenas nos algoritmos complexos, mas na capacidade de traduzir números em clareza para quem decide, usando inteligência de dados para subsidiar ações de impacto. Hoje fomento uma cultura analítica por meio de análise estatística, modelagem preditiva e dashboards interativos em Looker Studio e Power BI.</p>
+        <nav class="links" aria-label="Contato e redes">
+          <a class="link" data-track="linkedin" href="https://www.linkedin.com/in/davisonesoliveira" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="link" data-track="github" href="https://github.com/davisonesoliveira-netizen" target="_blank" rel="noopener">GitHub</a>
+          <a class="link" data-track="email" href="mailto:davisonesoliveira@gmail.com">davisonesoliveira@gmail.com</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="row" aria-labelledby="projetos">
+      <h2 id="projetos">Projetos em destaque</h2>
+      <div class="content">
+        <article class="project">
+          <h3>Pipeline ETL e dashboard de gestão financeira condominial</h3>
+          <p>Solução de ponta a ponta que automatiza a extração e o tratamento de relatórios contábeis complexos de administradoras. Um pipeline em Python (Google Colab) faz a ingestão e a normalização, carrega os dados no Google Sheets e alimenta um dashboard interativo no Looker Studio.</p>
+          <p>O foco é auditar o fluxo de caixa, acompanhar séries históricas de créditos e débitos, controlar a inadimplência e apoiar planos de ação para recuperar o caixa ordinário.</p>
+          <p class="stack">Python, Pandas, Google Sheets API, Looker Studio, ETL, Análise estatística</p>
+          <div class="links" style="margin-top:0">
+            <a class="link" data-track="projeto-dashboard" href="https://datastudio.google.com/reporting/25204edf-ddbf-4e9c-af24-a505af16a6ae" target="_blank" rel="noopener">Ver o dashboard</a>
+            <a class="link" data-track="projeto-repositorio" href="https://github.com/davisonesoliveira-netizen" target="_blank" rel="noopener">Explorar o repositório</a>
+          </div>
+        </article>
+
+        <article class="project soon">
+          <h3>Modelagem estatística de séries temporais <span class="status">Em breve</span></h3>
+          <p>Aplicação de metodologias econométricas e estatísticas avançadas, como modelos SARIMAX e VAR, para projetar cenários orçamentários, prever fluxo de caixa e analisar o comportamento financeiro sazonal.</p>
+          <p class="stack" style="margin-bottom:0">Estatística, Séries temporais, SARIMAX, Python</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="row" aria-labelledby="trajetoria">
+      <h2 id="trajetoria">Formação e atuação</h2>
+      <div class="content">
+        <dl class="facts">
+          <div>
+            <dt>Estatística</dt>
+            <dd>UNESP, graduação</dd>
+          </div>
+          <div>
+            <dt>Data Science e Informática em Saúde</dt>
+            <dd>Hospital Israelita Albert Einstein, pós-graduação</dd>
+          </div>
+          <div>
+            <dt>SulAmérica, Fundação Bradesco e Sharecare</dt>
+            <dd>Modelos estatísticos, análise de sinistros, previsão de desfechos, dashboards e análise de impacto financeiro</dd>
+          </div>
+          <div>
+            <dt>Ferramentas</dt>
+            <dd>Python, Pandas, Looker Studio, Power BI, Google Sheets API</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Davison Eduardo Silva de Oliveira</span>
+    <button class="text-btn" type="button" id="open-privacy">Privacidade e dados de visita</button>
+  </div>
+</footer>
+
+<!-- Aviso de consentimento (LGPD) -->
+<div class="consent" id="consent" role="region" aria-label="Aviso de privacidade" hidden>
+  <p>Este site registra dados anônimos de visita (página, origem, dispositivo, idioma e tempo de permanência) para entender como o portfólio é usado. Nada é coletado sem a sua autorização.</p>
+  <div class="actions">
+    <button class="btn" type="button" id="consent-allow">Permitir</button>
+    <button class="btn ghost" type="button" id="consent-deny">Recusar</button>
+    <button class="text-btn" type="button" id="consent-more">Saiba mais</button>
+  </div>
+</div>
+
+<dialog id="privacy" aria-labelledby="privacy-title">
+  <h2 id="privacy-title">Privacidade e dados de visita</h2>
+  <p>Com a sua permissão, este site registra informações técnicas e anônimas sobre a visita. O objetivo é entender de onde vêm os visitantes e quais conteúdos despertam interesse.</p>
+  <h3>O que é registrado</h3>
+  <ul>
+    <li>Página acessada, site de origem e parâmetros de campanha (UTM)</li>
+    <li>Idioma, fuso horário, tipo de dispositivo, navegador, sistema e tamanho da tela</li>
+    <li>Tempo de permanência, profundidade de rolagem e cliques nos links do site</li>
+    <li>Um identificador aleatório, guardado no seu navegador, para reconhecer visitas repetidas</li>
+  </ul>
+  <h3>O que não é registrado</h3>
+  <p>Nome, e-mail, endereço IP e localização precisa.</p>
+  <h3>Seus direitos</h3>
+  <p>Você pode recusar ou revogar a permissão a qualquer momento aqui. Para pedir acesso ou exclusão dos dados, escreva para davisonesoliveira@gmail.com. Os dados ficam em planilha privada do responsável pelo site e são mantidos por até 12 meses.</p>
+  <div class="actions">
+    <button class="btn" type="button" id="privacy-allow">Permitir registro</button>
+    <button class="btn ghost" type="button" id="privacy-deny">Recusar registro</button>
+    <button class="btn ghost" type="button" id="privacy-close">Fechar</button>
+  </div>
+</dialog>
+
+<script>
+(() => {
+  "use strict";
+
+  // Cole aqui a URL do app da web do Google Apps Script (termina em /exec).
+  // Enquanto estiver como está, nenhum dado é enviado.
+  const ENDPOINT = "COLE_AQUI_A_URL_DO_APPS_SCRIPT";
+
+  const CONSENT_KEY = "portfolio_consent_v1";
+  const VISITOR_KEY = "portfolio_vid";
+  const SESSION_KEY = "portfolio_sid";
+
+  const ls = {
+    get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+    set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} },
+    del(k) { try { localStorage.removeItem(k); } catch (e) {} }
+  };
+  const ss = {
+    get(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } },
+    set(k, v) { try { sessionStorage.setItem(k, v); } catch (e) {} }
+  };
+  const $ = (id) => document.getElementById(id);
+
+  const uuid = () =>
+    (window.crypto && crypto.randomUUID)
+      ? crypto.randomUUID()
+      : "id-" + Date.now().toString(36) + Math.random().toString(36).slice(2, 10);
+
+  const enabled = ENDPOINT.startsWith("https://");
+  let started = false;
+
+  function detect() {
+    const ua = navigator.userAgent || "";
+    const device = /iPad|Tablet|PlayBook|Silk/i.test(ua) || (/Android/i.test(ua) && !/Mobile/i.test(ua))
+      ? "tablet" : /Mobi|iPhone|Android/i.test(ua) ? "mobile" : "desktop";
+    const browser =
+      /Edg\//.test(ua) ? "Edge" :
+      /OPR\/|Opera/.test(ua) ? "Opera" :
+      /Firefox\//.test(ua) ? "Firefox" :
+      /Chrome\//.test(ua) ? "Chrome" :
+      /Safari\//.test(ua) ? "Safari" : "Outro";
+    const os =
+      /Windows/.test(ua) ? "Windows" :
+      /Android/.test(ua) ? "Android" :
+      /iPhone|iPad|iPod/.test(ua) ? "iOS" :
+      /Mac OS X/.test(ua) ? "macOS" :
+      /Linux/.test(ua) ? "Linux" : "Outro";
+    return { device, browser, os };
+  }
+
+  function send(event, extra) {
+    if (!enabled) return;
+    const params = new URLSearchParams(location.search);
+    const payload = Object.assign({
+      event,
+      visitor_id: ls.get(VISITOR_KEY),
+      session_id: ss.get(SESSION_KEY),
+      page: location.pathname + location.hash,
+      referrer: document.referrer ? new URL(document.referrer).hostname : "direto",
+      utm_source: params.get("utm_source") || "",
+      utm_medium: params.get("utm_medium") || "",
+      utm_campaign: params.get("utm_campaign") || ""
+    }, extra || {});
+    try {
+      fetch(ENDPOINT, {
+        method: "POST",
+        mode: "no-cors",
+        keepalive: true,
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(payload)
+      }).catch(() => {});
+    } catch (e) {}
+  }
+
+  function startTracking() {
+    if (started) return;
+    started = true;
+
+    let vid = ls.get(VISITOR_KEY);
+    const returning = !!vid;
+    if (!vid) { vid = uuid(); ls.set(VISITOR_KEY, vid); }
+    if (!ss.get(SESSION_KEY)) ss.set(SESSION_KEY, uuid());
+
+    const d = detect();
+    send("visit", {
+      returning: returning ? "sim" : "não",
+      language: navigator.language || "",
+      timezone: (Intl.DateTimeFormat().resolvedOptions().timeZone) || "",
+      screen: screen.width + "x" + screen.height,
+      viewport: innerWidth + "x" + innerHeight,
+      device: d.device, browser: d.browser, os: d.os,
+      dark_mode: matchMedia("(prefers-color-scheme: dark)").matches ? "sim" : "não"
+    });
+
+    // Cliques em links rastreados
+    document.addEventListener("click", (e) => {
+      const a = e.target.closest && e.target.closest("a[data-track]");
+      if (a) send("click", { target: a.getAttribute("data-track") });
+    });
+
+    // Tempo de permanência e rolagem
+    const t0 = Date.now();
+    let maxScroll = 0, left = false;
+    const onScroll = () => {
+      const h = document.documentElement.scrollHeight - innerHeight;
+      if (h > 0) maxScroll = Math.max(maxScroll, Math.round((scrollY / h) * 100));
+      else maxScroll = 100;
+    };
+    addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    const leave = () => {
+      if (left) return;
+      left = true;
+      send("leave", {
+        duration_s: Math.round((Date.now() - t0) / 1000),
+        max_scroll_pct: maxScroll
+      });
+    };
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "hidden") leave();
+      else left = false;
+    });
+    addEventListener("pagehide", leave);
+  }
+
+  // Consentimento
+  const banner = $("consent");
+  const dialog = $("privacy");
+
+  function setConsent(value) {
+    ls.set(CONSENT_KEY, value);
+    banner.hidden = true;
+    if (dialog.open) dialog.close();
+    if (value === "granted") startTracking();
+    else {
+      ls.del(VISITOR_KEY);
+      // Recusar interrompe o envio na próxima visita; nesta sessão basta recarregar para zerar os listeners.
+      if (started) location.reload();
+    }
+  }
+
+  $("consent-allow").addEventListener("click", () => setConsent("granted"));
+  $("consent-deny").addEventListener("click", () => setConsent("denied"));
+  $("privacy-allow").addEventListener("click", () => setConsent("granted"));
+  $("privacy-deny").addEventListener("click", () => setConsent("denied"));
+  $("privacy-close").addEventListener("click", () => dialog.close());
+  const openPrivacy = () => dialog.showModal();
+  $("consent-more").addEventListener("click", openPrivacy);
+  $("open-privacy").addEventListener("click", openPrivacy);
+
+  const stored = ls.get(CONSENT_KEY);
+  if (stored === "granted") startTracking();
+  else if (stored !== "denied" && enabled) banner.hidden = false;
+})();
+</script>
 </body>
 </html>
